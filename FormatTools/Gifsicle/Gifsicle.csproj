@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Company>Stable Cube</Company>
+    <Version>1.0.0</Version>
+    <PackageId>StableCube.Media.Gifsicle</PackageId>
+    <Title>StableCube.Media.Gifsicle</Title>
+    <Description>Tools for building and running Gifsicle commands</Description>
+    <IsPackable>true</IsPackable>
+    <RepositoryUrl>https://github.com/StableCube/Media</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CliWrap" Version="3.4.4" />
+  </ItemGroup>
+</Project>

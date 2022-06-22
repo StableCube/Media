@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>StableCube.Media.FFProbe</PackageId>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Company>Stable Cube</Company>
+    <Version>1.0.0</Version>
+    <Title>StableCube.Media.FFProbe</Title>
+    <Description>Services for running FFProbe commands</Description>
+    <IsPackable>true</IsPackable>
+    <RepositoryUrl>https://github.com/StableCube/Media</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="CliWrap" Version="3.4.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../FFProbe.DataModel/FFProbe.DataModel.csproj" />
+    <ProjectReference Include="../../FFMpeg.CommandBuilder/FFMpeg.CommandBuilder/FFMpeg.CommandBuilder.csproj" />
+  </ItemGroup>
+
+</Project>
