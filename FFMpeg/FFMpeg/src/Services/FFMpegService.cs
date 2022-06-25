@@ -115,9 +115,27 @@ namespace StableCube.Media.FFMpeg
                     cancellationToken: cancellationToken
                 );
 
-                await Task.WhenAll(transcodeTask, progressTask);
+                FFMpegProgressMonitorException timeoutEx = null;
+                try
+                {
+                    await Task.WhenAll(transcodeTask, progressTask);
+                }
+                catch (FFMpegProgressMonitorException e)
+                {
+                    timeoutEx = e;
+                }
 
                 result = transcodeTask.Task.Result;
+                if(timeoutEx != null && String.IsNullOrEmpty(result.StandardError))
+                {
+                    result = new BufferedCommandResult(
+                        1, 
+                        DateTimeOffset.UtcNow, 
+                        DateTimeOffset.UtcNow, 
+                        null, 
+                        timeoutEx.Message
+                    );
+                }
             }
             else
             {
