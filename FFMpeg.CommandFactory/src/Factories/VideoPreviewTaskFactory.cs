@@ -55,6 +55,8 @@ namespace StableCube.Media.FFMpeg.CommandFactory
             if(scaleOutputParams != null)
             {
                 chain.AddDynamicScale(scaleOutputParams);
+                //Make sure output width/height is divisible by 2 to prevent problems
+                chain.AddPad(@"iw+mod(iw\,2)", @"ih+mod(ih\,2)", null, null, null);
             }
 
             return cmdBuilder.Task;
