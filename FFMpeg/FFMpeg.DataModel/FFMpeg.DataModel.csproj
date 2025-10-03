@@ -4,7 +4,7 @@
     <PackageId>StableCube.Media.FFMpeg.DataModel</PackageId>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Company>Stable Cube</Company>
-    <Version>1.0.0</Version>
+    <Version>8.0.6</Version>
     <IsPackable>true</IsPackable>
     <Title>StableCube.Media.FFMpeg.DataModel</Title>
     <Description>Data model for the FFMpeg service</Description>
@@ -13,7 +13,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="6.0.5" />
+    <PackageReference Include="System.Text.Json" Version="8.0.6" />
   </ItemGroup>
   
 </Project>
