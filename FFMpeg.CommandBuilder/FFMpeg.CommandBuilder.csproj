@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>StableCube.Media.FFMpeg.CommandBuilder</PackageId>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Company>Stable Cube</Company>
+    <Title>StableCube.Media.FFMpeg.CommandBuilder</Title>
+    <Description>Builds FFMpeg commands</Description>
+    <RepositoryUrl>https://github.com/StableCube/Media</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IsPackable>true</IsPackable>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,32 @@
+<Project>
+  <!-- 3rd Party Packages -->
+  <ItemGroup>
+    <PackageVersion Include="CliWrap" Version="3.9.0" />
+    <PackageVersion Include="System.Text.Json" Version="8.0.6" />
+    <PackageVersion Include="Microsoft.Extensions.Logging" Version="8.0.1" />
+  </ItemGroup>
+
+  <!-- Tests -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageVersion Include="xunit" Version="2.9.3" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+  </ItemGroup>
+
+  <!-- Project Packages -->
+  <ItemGroup>
+    <PackageVersion Include="StableCube.Media.FFMpeg"                     Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.FFProbe"                    Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.FFMpeg.DataModel"           Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.FFMpeg.CommandBuilder"      Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.FFMpeg.CommandFactory"      Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.ImageMagick"                Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.ImageMagick.DataModel"      Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.ImageMagick.CommandBuilder" Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.Gif2WebP"                   Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.JpegOptim"                  Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.OptiPng"                    Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.PngQuant"                   Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.WebP"                       Version="8.0.7" />
+  </ItemGroup>
+</Project>

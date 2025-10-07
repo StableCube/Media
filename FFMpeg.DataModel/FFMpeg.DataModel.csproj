@@ -1,22 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>StableCube.Media.FFMpeg.CommandFactory</PackageId>
+    <PackageId>StableCube.Media.FFMpeg.DataModel</PackageId>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Company>Stable Cube</Company>
     <IsPackable>true</IsPackable>
-    <Title>StableCube.Media.FFMpeg.CommandFactory</Title>
-    <Description>High level collection of CommandBuilder commands for various video manipulation tasks</Description>
+    <Title>StableCube.Media.FFMpeg.DataModel</Title>
+    <Description>Data model for the FFMpeg service</Description>
     <RepositoryUrl>https://github.com/StableCube/Media</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
-
+  
   <ItemGroup>
-    <PackageReference Include="System.ComponentModel.Annotations" />
+    <PackageReference Include="System.Text.Json" />
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="StableCube.Media.FFMpeg.CommandBuilder" />
-  </ItemGroup>
+  
 </Project>

@@ -1,4 +1,8 @@
 ###################
+# Workspace Data
+###################
+user-data
+###################
 # Secrets Config  #
 ###################
 *.Secrets.json
@@ -28,6 +32,8 @@ _UpgradeReport_Files/
 ###############
 bin/
 obj/
+TestResults/
+ffmpegBin/*
 ###################
 # Web publish log #
 ###################
@@ -42,14 +48,6 @@ obj/
 *.launch
 .settings/
 *.sublime-workspace
-###################
-# IDE - VSCode
-###################
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 ############
 # Packages #
 ############
@@ -90,4 +88,3 @@ _[Ss]cripts
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over
-mono_crash.*

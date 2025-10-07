@@ -1,22 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <PackageId>StableCube.Media.FFMpeg.CommandFactory</PackageId>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Company>Stable Cube</Company>
+    <PackageId>StableCube.Media.JpegOptim</PackageId>
+    <Title>StableCube.Media.JpegOptim</Title>
+    <Description>Tools for building and running JpegOptim commands</Description>
     <IsPackable>true</IsPackable>
-    <Title>StableCube.Media.FFMpeg.CommandFactory</Title>
-    <Description>High level collection of CommandBuilder commands for various video manipulation tasks</Description>
     <RepositoryUrl>https://github.com/StableCube/Media</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.ComponentModel.Annotations" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="StableCube.Media.FFMpeg.CommandBuilder" />
+    <PackageReference Include="CliWrap" />
   </ItemGroup>
 </Project>

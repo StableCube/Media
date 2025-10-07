@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>StableCube.Media.FFProbe.DataModel</PackageId>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Company>Stable Cube</Company>
+    <IsPackable>true</IsPackable>
+    <Title>StableCube.Media.FFProbe.DataModel</Title>
+    <Description>Data model for the FFProbe service</Description>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" />
+  </ItemGroup>
+  
+</Project>

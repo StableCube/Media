@@ -1,22 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <PackageId>StableCube.Media.FFMpeg.CommandFactory</PackageId>
+    <PackageId>StableCube.Media.FFProbe</PackageId>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Company>Stable Cube</Company>
+    <Title>StableCube.Media.FFProbe</Title>
+    <Description>Services for running FFProbe commands</Description>
     <IsPackable>true</IsPackable>
-    <Title>StableCube.Media.FFMpeg.CommandFactory</Title>
-    <Description>High level collection of CommandBuilder commands for various video manipulation tasks</Description>
     <RepositoryUrl>https://github.com/StableCube/Media</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.ComponentModel.Annotations" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="CliWrap" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="StableCube.Media.FFMpeg.DataModel" />
     <PackageReference Include="StableCube.Media.FFMpeg.CommandBuilder" />
   </ItemGroup>
+
 </Project>
