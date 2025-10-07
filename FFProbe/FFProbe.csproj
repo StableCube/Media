@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="StableCube.Media.FFMpeg.DataModel" />
+    <PackageReference Include="StableCube.Media.FFProbe.DataModel" />
     <PackageReference Include="StableCube.Media.FFMpeg.CommandBuilder" />
   </ItemGroup>
 

@@ -16,8 +16,9 @@
   <!-- Project Packages -->
   <ItemGroup>
     <PackageVersion Include="StableCube.Media.FFMpeg"                     Version="8.0.7" />
-    <PackageVersion Include="StableCube.Media.FFProbe"                    Version="8.0.7" />
     <PackageVersion Include="StableCube.Media.FFMpeg.DataModel"           Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.FFProbe"                    Version="8.0.7" />
+    <PackageVersion Include="StableCube.Media.FFProbe.DataModel"          Version="8.0.7" />
     <PackageVersion Include="StableCube.Media.FFMpeg.CommandBuilder"      Version="8.0.7" />
     <PackageVersion Include="StableCube.Media.FFMpeg.CommandFactory"      Version="8.0.7" />
     <PackageVersion Include="StableCube.Media.ImageMagick"                Version="8.0.7" />
