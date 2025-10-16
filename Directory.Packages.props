@@ -4,6 +4,7 @@
     <PackageVersion Include="CliWrap" Version="3.9.0" />
     <PackageVersion Include="System.Text.Json" Version="8.0.6" />
     <PackageVersion Include="Microsoft.Extensions.Logging" Version="8.0.1" />
+    <PackageVersion Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 
   <!-- Tests -->
