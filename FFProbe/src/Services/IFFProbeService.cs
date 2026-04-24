@@ -10,7 +10,7 @@ namespace StableCube.Media.FFProbe
     {
         Task<FFProbeFileInfo> RunCommandAsync(
             FFMpegCommandTask commandTask,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -18,17 +18,17 @@ namespace StableCube.Media.FFProbe
         /// </summary>
         Task<FFProbeFileInfo> FileInfoAsync(
             string filePath,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         );
 
         Task<FFProbeFormat> GetFormatAsync(
             string filePath,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         );
 
         Task<int?> GetVideoStreamIndexAsync(
             string filePath,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace StableCube.Media.FFProbe
         Task<long?> FrameCountFastAsync(
             string filePath, 
             int streamIndex = 0,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         );
 
         /// <summary>
@@ -46,24 +46,24 @@ namespace StableCube.Media.FFProbe
         Task<long?> FrameCountThoroughAsync(
             string filePath, 
             int streamIndex = 0,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         );
 
         Task<long?> FrameCountSmartAsync(
             string filePath, 
             int streamIndex = 0,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         );
 
         Task<TimeSpan?> DurationAsync(
             string filePath, 
             int streamIndex = 0,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         );
 
         Task<FileTypeInfo> GetFileTypeInfoAsync(
             string filePath,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         );
     }
 }

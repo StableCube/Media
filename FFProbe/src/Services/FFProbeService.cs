@@ -60,7 +60,7 @@ namespace StableCube.Media.FFProbe
 
         public async Task<FFProbeFileInfo> RunCommandAsync(
             FFMpegCommandTask commandTask,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         )
         {
             CommandTaskBuilder optBuilder = new CommandTaskBuilder(commandTask);
@@ -78,12 +78,20 @@ namespace StableCube.Media.FFProbe
 
             if(cmd.ExitCode != 0)
             {
-                string errorMsg = "FFProbe Command failed with: " + cmd.StandardError;
+                string errorMsg = $"FFProbe command: '{command}' failed. StandardError: '{cmd.StandardError}', StandardOutput: '{cmd.StandardOutput}'";
                 throw new FFProbeProcessException(errorMsg);
             }
 
-            result = JsonSerializer.Deserialize<FFProbeFileInfo>(cmd.StandardOutput, _serializerOptions);
-
+            try
+            {
+                result = JsonSerializer.Deserialize<FFProbeFileInfo>(cmd.StandardOutput, _serializerOptions);
+            }
+            catch (System.Exception)
+            {
+                string errorMsg = $"FFProbe command: '{command}' failed. Could not deserialize output.";
+                throw new FFProbeProcessException(errorMsg);
+            }
+            
             return result;
         }
 
@@ -92,7 +100,7 @@ namespace StableCube.Media.FFProbe
         /// </summary>
         public async Task<FFProbeFileInfo> FileInfoAsync(
             string filePath,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         )
         {
             if(filePath == null)
@@ -126,7 +134,7 @@ namespace StableCube.Media.FFProbe
         /// </summary>
         public async Task<FFProbeFormat> GetFormatAsync(
             string filePath,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         )
         {
             if(filePath == null)
@@ -156,7 +164,7 @@ namespace StableCube.Media.FFProbe
         /// </summary>
         public async Task<int?> GetVideoStreamIndexAsync(
             string filePath,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         )
         {
             if(filePath == null)
@@ -193,7 +201,7 @@ namespace StableCube.Media.FFProbe
         public async Task<long?> FrameCountFastAsync(
             string filePath, 
             int streamIndex = 0,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         )
         {
             if(filePath == null)
@@ -232,7 +240,7 @@ namespace StableCube.Media.FFProbe
         public async Task<long?> FrameCountThoroughAsync(
             string filePath, 
             int streamIndex = 0,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         )
         {
             if(filePath == null)
@@ -274,7 +282,7 @@ namespace StableCube.Media.FFProbe
         public async Task<long?> FrameCountSmartAsync(
             string filePath, 
             int streamIndex = 0,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         )
         {
             if(filePath == null)
@@ -310,7 +318,7 @@ namespace StableCube.Media.FFProbe
         public async Task<TimeSpan?> DurationAsync(
             string filePath, 
             int streamIndex = 0,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         )
         {
             if(filePath == null)
@@ -353,7 +361,7 @@ namespace StableCube.Media.FFProbe
         /// </summary>
         public async Task<List<VideoFormat>> GetFormatsAsync(
             string filePath,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         )
         {
             if(filePath == null)
@@ -407,7 +415,7 @@ namespace StableCube.Media.FFProbe
         /// </summary>
         public async Task<FileTypeInfo> GetFileTypeInfoAsync(
             string filePath,
-            CancellationToken cancellationToken = default(CancellationToken)
+            CancellationToken cancellationToken = default
         )
         {
             if(filePath == null)

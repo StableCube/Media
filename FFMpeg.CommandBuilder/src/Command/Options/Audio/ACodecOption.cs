@@ -13,7 +13,7 @@ namespace StableCube.Media.FFMpeg.CommandBuilder.Options.Audio
 
         public override CommandParam GetCommandParameter()
         {
-            return new CommandParam(OptionKey, Codec);
+            return new CommandParam(StreamOptionKey, Codec);
         }
     }
 }

@@ -69,7 +69,7 @@ namespace StableCube.Media.FFMpeg.CommandBuilder.Options.Generic
 
         public override CommandParam GetCommandParameter()
         {
-            string cmd = String.Join(String.Empty, new String[] 
+            string cmd = string.Join(string.Empty, new string[] 
             { 
                 (Repeat == true) ? "repeat+" : "",
                 (LevelPrefix == true) ? "level+" : "",

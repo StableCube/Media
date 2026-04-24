@@ -84,7 +84,7 @@ namespace StableCube.Media.FFMpeg.CommandBuilder
                 result += $"[{inLink}]";
             }
 
-            result += String.Join(",", filterStrings);
+            result += string.Join(",", filterStrings);
 
             foreach (var outLink in OutputLinks)
             {

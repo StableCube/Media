@@ -25,7 +25,7 @@ namespace StableCube.Media.FFMpeg.CommandBuilder
 
         public FilterChainBuilder AddInputLink(int fileInputIndex, int streamIndex)
         {
-            FilterChain.AddInputLink($"{fileInputIndex.ToString()}:{streamIndex.ToString()}");
+            FilterChain.AddInputLink($"{fileInputIndex}:{streamIndex}");
 
             return this;
         }
@@ -274,8 +274,8 @@ namespace StableCube.Media.FFMpeg.CommandBuilder
 
                 case FFMpegScalingMode.FitFill:
                     var hexColor = "000000";
-                    if(scaleParams.FillColor != String.Empty)
-                        hexColor = scaleParams.FillColor.Replace("#", String.Empty);
+                    if(scaleParams.FillColor != string.Empty)
+                        hexColor = scaleParams.FillColor.Replace("#", string.Empty);
 
                     string scaleWidth = targetWidthStr;
                     string scaleHeight = targetHeightStr;
@@ -306,6 +306,24 @@ namespace StableCube.Media.FFMpeg.CommandBuilder
                 default:
                     throw new ArgumentOutOfRangeException("ScalingMode: " + scaleParams.ScalingMode);
             }
+
+            return this;
+        }
+
+        public FilterChainBuilder AddLoudNorm(
+            double? targetIntegratedLoudness = null,
+            double? maximumTruePeak = null,
+            double? targetLoudnessRange = null
+        )
+        {
+            LoudNormFilter filter = new LoudNormFilter()
+            {
+                TargetIntegratedLoudness = targetIntegratedLoudness,
+                MaximumTruePeak = maximumTruePeak,
+                TargetLoudnessRange = targetLoudnessRange,
+            };
+
+            FilterChain.AddFilter(filter);
 
             return this;
         }

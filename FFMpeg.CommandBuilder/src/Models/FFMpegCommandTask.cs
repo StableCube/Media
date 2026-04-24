@@ -22,7 +22,7 @@ namespace StableCube.Media.FFMpeg.CommandBuilder
                 values.Add(pair.Value.ToString());
             }
 
-            return String.Join(" ", values);
+            return string.Join(" ", values);
         }
     }
 }

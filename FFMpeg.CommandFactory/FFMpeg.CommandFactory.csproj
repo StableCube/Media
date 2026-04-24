@@ -18,5 +18,6 @@
 
   <ItemGroup>
     <PackageReference Include="StableCube.Media.FFMpeg.CommandBuilder" />
+    <!-- <ProjectReference Include="../FFMpeg.CommandBuilder/FFMpeg.CommandBuilder.csproj" /> -->
   </ItemGroup>
 </Project>

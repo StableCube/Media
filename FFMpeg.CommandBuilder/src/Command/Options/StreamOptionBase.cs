@@ -12,7 +12,7 @@ namespace StableCube.Media.FFMpeg.CommandBuilder
                 if(Stream == null)
                     return OptionKey; 
 
-                return $"{OptionKey}:{Stream.ToString()}"; 
+                return $"{OptionKey}:{Stream}"; 
             } 
         }
 

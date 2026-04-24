@@ -76,7 +76,7 @@ namespace StableCube.Media.FFMpeg.CommandBuilder
             if(Index.HasValue && Type.HasValue)
                 return $"{Type.Value.ToString()}:{Index.Value.ToString()}";
 
-            return String.Empty;
+            return string.Empty;
         }
     }
 }

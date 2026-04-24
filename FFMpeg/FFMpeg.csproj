@@ -18,5 +18,6 @@
   <ItemGroup>
     <PackageReference Include="StableCube.Media.FFMpeg.DataModel" />
     <PackageReference Include="StableCube.Media.FFProbe" />
+    <!-- <ProjectReference Include="../FFProbe/FFProbe.csproj" /> -->
   </ItemGroup>
 </Project>

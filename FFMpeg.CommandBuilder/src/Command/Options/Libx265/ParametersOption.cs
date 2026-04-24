@@ -28,7 +28,7 @@ namespace StableCube.Media.FFMpeg.CommandBuilder.Options.Libx265
                     values.Add(param.Key + "=" + param.Value);
             }
 
-            string value = String.Join(":", values);
+            string value = string.Join(":", values);
 
             return new CommandParam(StreamOptionKey, value);
         }

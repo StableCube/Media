@@ -42,14 +42,14 @@ namespace StableCube.Media.FFMpeg.CommandBuilder
                 }
             }
 
-            string result = String.Empty;
+            string result = string.Empty;
             if(paramList.Count == 0)
             {
                 result = $"{FilterName}";
             }
             else
             {
-                result = $"{FilterName}={String.Join(":", paramList)}";
+                result = $"{FilterName}={string.Join(":", paramList)}";
             }
 
             return result;

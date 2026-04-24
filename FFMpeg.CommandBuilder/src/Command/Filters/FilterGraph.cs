@@ -55,7 +55,7 @@ namespace StableCube.Media.FFMpeg.CommandBuilder
                 filterChainStrings.Add(chain.ToString());
             }
 
-            return String.Join(";", filterChainStrings);
+            return string.Join(";", filterChainStrings);
         }
 
         /// <summary>

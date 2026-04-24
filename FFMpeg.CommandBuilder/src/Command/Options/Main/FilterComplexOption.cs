@@ -21,7 +21,7 @@ namespace StableCube.Media.FFMpeg.CommandBuilder.Options.Main
         public override CommandParam GetCommandParameter()
         {
             string filterString = Filter.ToString();
-            if(filterString == String.Empty)
+            if(filterString == string.Empty)
                 return new CommandParam(null, null);
 
             return new CommandParam(OptionKey, $"\"{Filter.ToString()}\"");
